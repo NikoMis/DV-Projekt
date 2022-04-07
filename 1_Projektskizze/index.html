@@ -4,120 +4,81 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Projektskizze</title>
-</head>
+</head> 
 <body>
-	<header>
-		<img src="images/HFU-Logo.png">
-		<h1>Projekt: Autospiel</h1>
-		<h2>Semester: SS 2022</h2>
-		<b>Teammitglieder:</b>
-		<ul>
-			<li>Nikolas Misevski (nikolas.misevski@hs-furtwangen.de)</li>
-			<li>Marcel Striegnitz (marcel.striegnitz@hs-furtwangen.de)</li>
-			<li>Nadja Knoke (nadja.marie.knoke@hs-furtwangen.de)</li>
-			<li>Florian Mehne (florian.max.mehne@hs-furtwangen.de)</li>
-		</ul>
-	</header>
-	<main>
-		<h2>1. Projekt-Beschreibung</h2>
-		<p>TODO: Beschreibung des Projekts</p>
-			<li> Der Anwender steuert ein Auto und man weicht mit Hilfe der Tastatur Gegenstaenden oder anderen Fahrzeugen aus </li>
-		<h2>2. Features und Anforderungen</h2>
-		<p>TODO: Stellen Sie die aus Ihrer Sicht wichtigsten funktionalen Anforderungen (maximal 10) zusammen:</p>
-		<ul>
-			<li>Was soll Ihre Anwendung leisten?</li>
-				Steuerung eines Autos nach links und rechts zwischen 3 festgelegten Positionen (=Spuren)
-				Auftauchen anderer Autos, die langsamer fahren und ueberholt werden muessen
-				3 Leben
-				nach 3 Kollisionen mit Objekten(Auto/Bande), also Verlust von allen 3 Leben bricht das Spiel ab bzw. startet neu
-				Schwierigkeitsgrad(generelle Geschwindigkeit erhoeht sich/mehr Verkehr) erhoeht sich je weiter man kommt
-				geeignete Benutzeroberflaeche und einfache Darstellung
+<header><img src="images/HFU-Logo.png" />
+<h1>Projekt: High Speed Racer 2D</h1>
+<h2>Semester: SS 2022</h2>
+<strong>Teammitglieder:</strong>
+<ul>
+<li>Nikolas Misevski (nikolas.misevski@hs-furtwangen.de)</li>
+<li>Marcel Striegnitz (marcel.striegnitz@hs-furtwangen.de)</li>
+<li>Nadja Knoke (nadja.marie.knoke@hs-furtwangen.de)</li>
+<li>Florian Mehne (florian.max.mehne@hs-furtwangen.de)</li>
+<li>Ataa Al Sharoua (ataa.sharoua@hs-furtwangen.de)</li>
+</ul>
+</header><main>
+<h2>1. Projekt-Beschreibung</h2>
+<p>TODO: Beschreibung des Projekts</p>
+<ul>
+<li>Mithilfe der Tastatur steuert der Anwender ein Auto und muss Hindernissen oder anderen Fahrzeugen ausweichen.</li>
+</ul>
+<h2>2. Features und Anforderungen</h2>
+<p>TODO: Stellen Sie die aus Ihrer Sicht wichtigsten funktionalen Anforderungen (maximal 10) zusammen:</p>
+<ul>
+<ul>
+<li>Was soll Ihre Anwendung leisten?</li>
+Die Anwendung soll die Steuerung eines Autos aus der Vogelperspektive erm&ouml;glichen. Dabei kann der Anwender das Auto mithilfe der Pfeiltasten auf der Stra&szlig;e bewegen. Auf diesen Spuren muss sich der Anwender auch bewegen, da ihm auf diesen langsamere Autos oder andere Hindernisse, wie beispielsweise &Ouml;llachen oder Baustellen entgegenkommen k&ouml;nnen und er diesen Ausweichen muss. Ber&uuml;hrt der Anwender mit dem Auto eines der Objekte, dann wird das Spiel abgebrochen und er befindet sich wieder im Hauptmen&uuml;. Dort kann er unter anderem zwischen 3 Schwierigkeitsgraden unterscheiden. (Leicht, Mittel, Schwer) Je h&ouml;her der Schwierigkeitsgrad, desto schneller kommen dem Anwender die Objekte entgegen. Dr&uuml;ckt der Anwender die rechte oder die linke Pfeiltaste, so kann er das Auto frei nach rechts oder links bewegen. Wird die obere bzw. die untere Pfeiltaste gedr&uuml;ckt, so kann der Anwender mit seinem Auto beschleunigen oder abbremsen. Daten, welche dauerhaft gespeichert werden sollen, sind der Highscore, also der zur&uuml;ckgelegte Weg pro Spiel und der Name des Anwenders. Das Programm soll auf Windows laufen und es wird mit Java und HTML entwickelt.
+</ul>
+<br />
+<h2>3. Architektur</h2>
+<p>TODO: Beschreibung der Software-Architektur inkl. Klassendiagramm z. B.:</p>
+<p>Das Klassendiagramm kann mit Hilfe von Pseudo Code (siehe HTML Quelltext) erstellt werden <a href="https://mermaid-js.github.io/mermaid/#/classDiagram">(Hilfe)</a>.
+<div class="diagram">
+classDiagram
+class GameRunner {
+Leaderboard()
+RunnerFunction()
 
+}
+class CarControlls {
+String Controlls
+ScannerInput()
+InputInterpreter()
+}
+class Obstacle {
+int LaneIndex
+float CarSpeeds
+RndLanes()
+}
+class Player {
+String PlayerName
+int Points
+run()
+}
+class Background{
+Background()
+BkgndSpeed()
 
-			<li>Welche Dienste werden angeboten?</li>
-				Entertainment
-				?
+}
 
-			<li>Welche Eingangsdaten sind erforderlich? Zu welchen Ausgaben werden diese verarbeitet?</li>
-				Tastendruck -> Autosteuerung
-				Kollision mit Objekt -> Verlust eines Lebens
-				Verlust von 3 Leben -> Spielabbruch/-neustart
-				?
-
-			<li>Wie soll sich das System in bestimmten Situationen verhalten?</li>
-				bei Tastendruck nach rechts, Auto bewegt sich um eine Spur nach rechts (von insgesamt möglichen 3 Spuren/Positionen)
-				bei Tastendruck nach links, Auto bewegt sich um eine Spur nach links (von insgesamt möglichen 3 Spuren/Positionen)
-				je nach Level(=bereits zurueckgelegte Strecke) erhoeht sich Schwierigkeitsgrad(wird schneller/mehr Autos)
-				nach 3 Kollisionen mit Objekt(Auto), also Verlust von allen 3 Leben bricht das Spiel ab bzw. startet neu
-
-
-			<li>Welche Daten sind dauerhaft zu speichern?</li>
-				Highscore(=zuruckgelegte Strecke) und Name des dazugehoerigen Spielers
-
-
-		</ul>
-		<p>TODO: Darüber hinaus sollen nicht-funktionale Anforderungen spezifiziert werden:</p>
-		<ul>
-			<li>Wie soll die Bedieneroberfläche aussehen?</li>
-				third person Perspektive das man Objekte aber noch rechtzeitig sieht
-				siehe Skizze
-
-			<li>In welcher Systemumgebung soll Ihr Programm lauffähig sein?</li>
-				?
-
-			<li>Mit welchen Entwicklungswerkzeugen wird gearbeitet?</li>
-				?
-
-		</ul>
-		<h2>3. Architektur</h2>
-		<p>TODO: Beschreibung der Software-Architektur inkl. Klassendiagramm z. B.:</p>
-		<p>Das Klassendiagramm kann mit Hilfe von Pseudo Code (siehe HTML Quelltext) erstellt werden <a href="https://mermaid-js.github.io/mermaid/#/classDiagram">(Hilfe)</a>.
-		<div class="diagram">
-			classDiagram
-			class GameRunner {
-				Leaderboard()
-				RunnerFunction()
-				
-			}
-			class CarControlls {
-				String Controlls
-				ScannerInput()
-				InputInterpreter()
-			}
-			class Obstacle {
-				int LaneIndex
-                float CarSpeeds
-				RndLanes()
-			}
-			class Player {
-				String PlayerName
-                int Points
-				run()
-			}
-            class Background{
-            	Background()
-                BkgndSpeed()
-            
-            }
-            
-			GameRunner <|-- CarControlls
-			GameRunner <|-- Obstacle
-			GameRunner <|-- Player
-            GameRunner <|-- Background
-		</div>
-		<h2>4. Aufwandsschätzung und Aufteilung</h2>
-		<p>TODO: Schätzen Sie den Aufwand der verschiedenen Teile Ihres Programms ab und legen Sie fest, wie die Aufteilung auf die Gruppenmitglieder aussehen soll.</p>
-		<h2>Optional: Verweis auf andere HTML Dateien</h2>
-		<p><a href="otherfile.html">Eine weitere HTML-Datei</a></p>
-	</main>
-	<footer></footer>
-</body>
-</html>
-<!-- scripts to render diagrams (do not touch!) -->
+GameRunner <|-- CarControlls
+GameRunner <|-- Obstacle
+GameRunner <|-- Player
+GameRunner <|-- Background
+</div> 
+<h2>4. Aufwandssch&auml;tzung und Aufteilung</h2>
+<p>TODO: Sch&auml;tzen Sie den Aufwand der verschiedenen Teile Ihres Programms ab und legen Sie fest, wie die Aufteilung auf die Gruppenmitglieder aussehen soll.</p>
+<ul>
+<li>Skala von 1 bis 10 zur Aufwandsabsch&auml;tzung(1 = Geringer Aufwand, 10 = Hoher Aufwand) 1. Obstacles(6) 2. CarControls(4) 3. Player(5) 4.Background(5)</li>
+<li>Gruppeneinteilung: Programmoberfl&auml;che, Steuerungen(Florian, Marcel, Nikolas); Hintergrund und Hinderniss-Programmierung(Ataa, Nadja)</li>
+</ul>
+<h2>Optional: Verweis auf andere HTML Dateien</h2>
+<p><a href="otherfile.html">Eine weitere HTML-Datei</a></p>
+</main><footer></footer><!-- scripts to render diagrams (do not touch!) -->
 <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
 <script>
 	mermaid.initialize({startOnLoad:true});
 	let diagrams = document.querySelectorAll(".diagram")
 	mermaid.init({}, diagrams);
-</script>
 </script>
