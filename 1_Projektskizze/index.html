@@ -1,79 +1,81 @@
-<!DOCTYPE html>
++<!DOCTYPE html>
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Projektskizze</title>
-</head>
+</head> 
 <body>
-	<header>
-		<img src="images/HFU-Logo.png">
-		<h1>Projekt: XXX</h1>
-		<h2>Semester: WS/SS 20XX</h2>
-		<b>Teammitglieder:</b>
-		<ul>
-			<li>Student 1 (student.1@hs-furtwangen.de)</li>
-			<li>Student 2 (student.1@hs-furtwangen.de)</li>
-			<li>Student 3 (student.1@hs-furtwangen.de)</li>
-		</ul>
-	</header>
-	<main>
-		<h2>1. Projekt-Beschreibung</h2>
-		<p>TODO: Beschreibung des Projekts</p>
-		<h2>2. Features und Anforderungen</h2>
-		<p>TODO: Stellen Sie die aus Ihrer Sicht wichtigsten funktionalen Anforderungen (maximal 10) zusammen:</p>
-		<ul>
-			<li>Was soll Ihre Anwendung leisten?</li>
-			<li>Welche Dienste werden angeboten?</li>
-			<li>Welche Eingangsdaten sind erforderlich? Zu welchen Ausgaben werden diese verarbeitet?</li>
-			<li>Wie soll sich das System in bestimmten Situationen verhalten?</li>
-			<li>Welche Daten sind dauerhaft zu speichern?</li>
-		</ul>
-		<p>TODO: Darüber hinaus sollen nicht-funktionale Anforderungen spezifiziert werden:</p>
-		<ul>
-			<li>Wie soll die Bedieneroberfläche aussehen?</li>
-			<li>In welcher Systemumgebung soll Ihr Programm lauffähig sein?</li>
-			<li>Mit welchen Entwicklungswerkzeugen wird gearbeitet?</li>
-		</ul>
-		<h2>3. Architektur</h2>
-		<p>TODO: Beschreibung der Software-Architektur inkl. Klassendiagramm z. B.:</p>
-		<p>Das Klassendiagramm kann mit Hilfe von Pseudo Code (siehe HTML Quelltext) erstellt werden <a href="https://mermaid-js.github.io/mermaid/#/classDiagram">(Hilfe)</a>.
+<header><img src="images/HFU-Logo.png" />
+<h1>Projekt: High Speed Racer 2D</h1>
+<h2>Semester: SS 2022</h2>
+<strong>Teammitglieder:</strong>
+<ul>
+<li>Nikolas Misevski (nikolas.misevski@hs-furtwangen.de)</li>
+<li>Marcel Striegnitz (marcel.striegnitz@hs-furtwangen.de)</li>
+<li>Nadja Knoke (nadja.marie.knoke@hs-furtwangen.de)</li>
+<li>Florian Mehne (florian.max.mehne@hs-furtwangen.de)</li>
+<li>Ataa Al Sharoua (ataa.sharoua@hs-furtwangen.de)</li>
+</ul>
+</header><main>
+<h2>1. Projekt-Beschreibung</h2>
+<p>TODO: Beschreibung des Projekts</p>
+<ul>
+<li>Mithilfe der Tastatur steuert der Anwender ein Auto und muss Hindernissen oder anderen Fahrzeugen ausweichen.</li>
+</ul>
+<h2>2. Features und Anforderungen</h2>
+<p>TODO: Stellen Sie die aus Ihrer Sicht wichtigsten funktionalen Anforderungen (maximal 10) zusammen:</p>
+<ul>
+<ul>
+<li>Was soll Ihre Anwendung leisten?</li>
+Die Anwendung soll die Steuerung eines Autos aus der Vogelperspektive erm&ouml;glichen. Dabei kann der Anwender das Auto mithilfe der Pfeiltasten auf der Stra&szlig;e bewegen. Auf diesen Spuren muss sich der Anwender auch bewegen, da ihm auf diesen langsamere Autos oder andere Hindernisse, wie beispielsweise &Ouml;llachen oder Baustellen entgegenkommen k&ouml;nnen und er diesen Ausweichen muss. Ber&uuml;hrt der Anwender mit dem Auto eines der Objekte, dann wird das Spiel abgebrochen und er befindet sich wieder im Hauptmen&uuml;. Dort kann er unter anderem zwischen 3 Schwierigkeitsgraden unterscheiden. (Leicht, Mittel, Schwer) Je h&ouml;her der Schwierigkeitsgrad, desto schneller kommen dem Anwender die Objekte entgegen. Dr&uuml;ckt der Anwender die rechte oder die linke Pfeiltaste, so kann er das Auto frei nach rechts oder links bewegen. Wird die obere bzw. die untere Pfeiltaste gedr&uuml;ckt, so kann der Anwender mit seinem Auto beschleunigen oder abbremsen. Daten, welche dauerhaft gespeichert werden sollen, sind der Highscore, also der zur&uuml;ckgelegte Weg pro Spiel und der Name des Anwenders. Das Programm soll auf Windows laufen und es wird mit Java und HTML entwickelt.
+</ul>
+<br />
+<h2>3. Architektur</h2>
+<p>TODO: Beschreibung der Software-Architektur inkl. Klassendiagramm z. B.:</p>
+<p>Das Klassendiagramm kann mit Hilfe von Pseudo Code (siehe HTML Quelltext) erstellt werden <a href="https://mermaid-js.github.io/mermaid/#/classDiagram">(Hilfe)</a>.
+<div class="diagram">
+classDiagram
+class GameRunner {
+Leaderboard()
+RunnerFunction()
 
-		<div class="diagram">
-			classDiagram
-			class Animal {
-				int age
-				String gender
-				isMammal()
-				mate()
-			}
-			class Duck {
-				String beakColor
-				swim()
-				quack()
-			}
-			class Fish {
-				int sizeInFeet
-				canEat()
-			}
-			class Zebra {
-				bool is_wild
-				run()
-			}
-			Animal <|-- Duck
-			Animal <|-- Fish
-			Animal <|-- Zebra
-		</div>
-		<h2>4. Aufwandsschätzung und Aufteilung</h2>
-		<p>TODO: Schätzen Sie den Aufwand der verschiedenen Teile Ihres Programms ab und legen Sie fest, wie die Aufteilung auf die Gruppenmitglieder aussehen soll.</p>
-		<h2>Optional: Verweis auf andere HTML Dateien</h2>
-		<p><a href="otherfile.html">Eine weitere HTML-Datei</a></p>
-	</main>
-	<footer></footer>
-</body>
-</html>
+}
+class CarControlls {
+String Controlls
+ScannerInput()
+InputInterpreter()
+}
+class Obstacle {
+int LaneIndex
+float CarSpeeds
+RndLanes()
+}
+class Player {
+String PlayerName
+int Points
+run()
+}
+class Background{
+Background()
+BkgndSpeed()
 
-<!-- scripts to render diagrams (do not touch!) -->
+}
+
+GameRunner <|-- CarControlls
+GameRunner <|-- Obstacle
+GameRunner <|-- Player
+GameRunner <|-- Background
+</div> 
+<h2>4. Aufwandssch&auml;tzung und Aufteilung</h2>
+<p>TODO: Sch&auml;tzen Sie den Aufwand der verschiedenen Teile Ihres Programms ab und legen Sie fest, wie die Aufteilung auf die Gruppenmitglieder aussehen soll.</p>
+<ul>
+<li>Skala von 1 bis 10 zur Aufwandsabsch&auml;tzung(1 = Geringer Aufwand, 10 = Hoher Aufwand) 1. Obstacles(6) 2. CarControls(4) 3. Player(5) 4.Background(5)</li>
+<li>Gruppeneinteilung: Programmoberfl&auml;che, Steuerungen(Florian, Marcel, Nikolas); Hintergrund und Hinderniss-Programmierung(Ataa, Nadja)</li>
+</ul>
+<h2>Optional: Verweis auf andere HTML Dateien</h2>
+<p><a href="otherfile.html">Eine weitere HTML-Datei</a></p>
+</main><footer></footer><!-- scripts to render diagrams (do not touch!) -->
 <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
 <script>
 	mermaid.initialize({startOnLoad:true});
