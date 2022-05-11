@@ -18,22 +18,40 @@ private String m_hfulogo;
 
 	public GUI_Racer() {
 		
-		//super(titel);
-		//bildLaden();
-		//this.setLayout(new BorderLayout());
-		//this.add(BorderLayout.CENTER, new bildflaeche(m_hfulogo));
 		setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+		//Bild laden
+		
+		/*add(new BackgroundPanel(new ImageIcon("C:\\Users\\nikol\\OneDrive\\Desktop\\tufftuff.jpg")));
+		pack();
+		setVisible(true);
+		*/
+				
+		JPanel panel = new JPanel();
+		
 		setTitle("High Speed Racer 2D");
+		//x = 700 , y = 600
 		setSize(700,600);
 		setLocationRelativeTo(null);
 		setDefaultCloseOperation(EXIT_ON_CLOSE);
-		//Liste mit Highscores
+		add(panel);
+		panel.setLayout(null);
+		panel.setBackground(Color.CYAN);
+		
+		
+		//Überschrift
+		Font font = new Font("Berlin Sans", Font.BOLD | Font.ITALIC, 20);
+		JLabel ueberschrift = new JLabel("High Speed Racer 2D");
+		ueberschrift.setFont(font);
+		ueberschrift.setBounds(250, 30, 205, 30);
+		ueberschrift.setBackground(Color.yellow);
+		ueberschrift.setOpaque(true);
+		panel.add(ueberschrift);
 		JList<String> list = new JList<>();
-		//Image
+		
 		
 		//Menubar
 		JMenuBar menu = new JMenuBar();
-		JMenu datei = new JMenu("Men�");
+		JMenu datei = new JMenu("Menü");
 		JMenuItem CG = new JMenuItem("Close Game");
 		CG.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -43,13 +61,15 @@ private String m_hfulogo;
 		menu.add(datei);
 		setJMenuBar(menu);
 		
-		//CloseButton
+		//CloseButton mit 80 Länge und 30 Höhe als Standard
 		JButton button = new JButton("Close");
-		button.setBounds(650,550,20,20);
-		
-		//JButton button2 = new JButton("Close");
-		//JButton button3 = new JButton("Close");
+		button.setBounds(595,500,80,30);
+		panel.add(button);
+		//PlayButton
 		JButton button1 = new JButton("Play");
+		button1.setBounds(300,250,80,30);
+		panel.add(button1);
+		
 	
 		button.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -58,25 +78,13 @@ private String m_hfulogo;
 		});
 		
 		//Layout
-				Container pane = getContentPane();
-				pane.setLayout(new FlowLayout(FlowLayout.CENTER));
-				pane.add(button1);
-				pane.add(button);
-				//pane.add(button1);
-		
-				
-		
+		//Container pane = getContentPane();
+		//pane.setLayout(new FlowLayout(FlowLayout.CENTER));
+		//pane.add(button1);
+		//pane.add(button);
+		//pane.add(button1);
 	}
 	
-
-	/*private void bildLaden() {
-		FileDialog d = new FileDialog(this, "Bilddatei laden...", FileDialog.LOAD);
-		d.setVisible(true);
-		m_hfulogo = d.getDirectory() + d.getFile();
-		
-	}*/
-
-
 	public static void main(String[] args) {
 		EventQueue.invokeLater(new Runnable()
 				{
@@ -87,5 +95,7 @@ private String m_hfulogo;
 				});
 		}
 }
+//Weiterer Befehl zum Bild Laden
+//JLabel label1 = new JLabel(new ImageIcon("datei.png"));
 	
 
