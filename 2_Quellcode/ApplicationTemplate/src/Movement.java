@@ -1,37 +1,45 @@
+package highspeedracer2D;
+
 import java.util.Timer;
 import java.util.TimerTask;
 
 public class Movement {
 Timer movement;
-	public Movement(){
-		movement=new Timer();
-		movement.scheduleAtFixedRate(new TimerTask() {
 
+	public Movement() {
+		movement = new Timer();
+		movement.scheduleAtFixedRate(new TimerTask() {
+	
 			@Override
 			public void run() {
-				if(Variablen.moveup=true) {
-					
-					Variablen.yAuto +=Variablen.speedup;
-					//Variablen.xAuto=0;
+	
+				if(Variablen.moveup == true) {
+					if(Variablen.yAuto>0) {
+						Variablen.yAuto -= Variablen.speedup;
+					}
 				}
-                    if(Variablen.movedown=true) {
-					
-					Variablen.yAuto -=Variablen.speeddown;
-					//Variablen.xAuto=0;
 				
+				else if(Variablen.movedown == true) {
+					if(Variablen.yAuto <= 500) {
+						Variablen.yAuto += Variablen.speeddown;
+					}
+				}
+				
+				if(Variablen.moveleft == true) {
+					if(Variablen.xAuto > 0) {
+						Variablen.xAuto -= Variablen.speedleft;
+					}
+				}
+				
+				else if(Variablen.moveright == true) {
+					if(Variablen.xAuto <= 750) {
+						Variablen.xAuto += Variablen.speedright;
+					}
+				}
 			}
-                     if(Variablen.moveleft=true) {
-     					
-     					//Variablen.yAuto= 0;
-     					Variablen.xAuto -= Variablen.speedleft;;
-                     
-                     }
-                     if(Variablen.moveright=true) {
-     					
-     					//Variablen.yAuto=0;
-     					Variablen.xAuto +=Variablen.speedright;
-                     }
-			}
-	},0, 10);
+			
+		}, 0, 10);
+	}
 }
-}
+
+// Marcel
