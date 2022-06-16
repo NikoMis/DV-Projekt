@@ -13,12 +13,18 @@ public class Variablen {
     static JFrame jf1;
 	static int breite = 800, hoehe = 600;
 	static int hintergrundY1 = 0, hintergrundY2 = -600; //hintergrundbild und um -600 versetztes zweites hintergrundbild
-	static int xAuto = 400, yAuto = 300; //Ort wo Auto erscheint bei beginn des spieles 
-	static int xGegner1 = 270, yGegner1 = 200; 
-	static int hintergrundspeed = 20; //je her die zahl desto langsamer, weil es wiederholung pro ms bedeutet
+	static int xAuto = 475, yAuto = 200; //Ort wo Auto erscheint bei beginn des spieles 
+	static int xGegner1 = 260, yGegner1 = -80; 
+	static int xGegner2 = 670, yGegner2 = -300;
+	static int xGegner3 = 260, yGegner3 = -480;
+	static int GegnerSpeed = 4;
+	static int hintergrundspeed = 10; //je her die zahl desto langsamer, weil es wiederholung pro ms bedeutet
 	static Box Player = new Box(xAuto,yAuto, 60, 80, null);
 	
-	static Box Enemy = new Box(xGegner1,yGegner1, 60, 80, null);
+	static Box Enemy1 = new Box(xGegner1, yGegner1, 60, 80, null);
+	static Box Enemy2 = new Box(xGegner2, yGegner2, 60, 80, null);
+	static Box Enemy3 = new Box(xGegner3, yGegner3, 60, 80, null);
+	
 	static boolean gameover = false;
 		
 	static Label lbl1;
