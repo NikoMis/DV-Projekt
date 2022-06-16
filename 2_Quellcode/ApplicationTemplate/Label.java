@@ -24,8 +24,10 @@ public class Label extends JLabel {
 		g.drawImage(Variablen.iAuto, Variablen.xAuto, Variablen.yAuto, 60, 80, null);
 		//g.drawImage(Variablen.Player, Variablen.xAuto, Variablen.yAuto, 50, 50, null);
 		g.drawImage(Variablen.iAuto, Variablen.xGegner1, Variablen.yGegner1, 60, 80, null);
+		g.drawImage(Variablen.iAuto, Variablen.xGegner2, Variablen.yGegner2, 60, 80, null);
+		g.drawImage(Variablen.iAuto, Variablen.xGegner3, Variablen.yGegner3, 60, 80, null);
 		
-		if(Variablen.Player.intersects(Variablen.Enemy)) {
+		if(Variablen.Player.intersects(Variablen.Enemy1) || Variablen.Player.intersects(Variablen.Enemy2) || Variablen.Player.intersects(Variablen.Enemy3)) {
 			Variablen.gameover = true;
 			//System.out.println("Game Over Loser");
 		}
