@@ -77,7 +77,7 @@ public class hintergrund {
 					}
 					Variablen.Enemy2.x = Variablen.xGegner2;
 				}
-			}
+			
 				if(Variablen.yGegner3<540) {
 					Variablen.yGegner3 += Variablen.GegnerSpeed;
 					Variablen.Enemy3.y = Variablen.yGegner3;
@@ -100,7 +100,7 @@ public class hintergrund {
 							break;
 					}
 					Variablen.Enemy3.x = Variablen.xGegner3;
-				}
+				}}
 		}
 			
 		}, 0, Variablen.hintergrundspeed);
