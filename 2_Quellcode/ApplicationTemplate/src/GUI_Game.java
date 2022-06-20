@@ -17,6 +17,7 @@ import javax.swing.JMenuBar;
 import javax.swing.JMenuItem;
 import javax.swing.JPanel;
 import java.awt.Component;
+import java.sql.Timestamp;
 
 
 public class GUI_Game extends JFrame{
@@ -25,7 +26,7 @@ public class GUI_Game extends JFrame{
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
-	private int highscore = -1; //checkt ob im Programm überhaupt ein Highscore grad ist.
+	private int highscore = -1; //checkt ob im Programm Ã¼berhaupt ein Highscore grad ist.
 	public GUI_Game() {
 		
 		
@@ -56,7 +57,7 @@ public class GUI_Game extends JFrame{
 		
 		
 		
-		//Überschrift
+		//Ãœberschrift
 		Font font = new Font("Berlin Sans", Font.BOLD | Font.ITALIC, 20);
 		JLabel ueberschrift = new JLabel("High Speed Racer 2D");
 		ueberschrift.setFont(font);
@@ -70,7 +71,7 @@ public class GUI_Game extends JFrame{
 		
 		//Menubar
 		JMenuBar menu = new JMenuBar();
-		JMenu datei = new JMenu("Menü");
+		JMenu datei = new JMenu("MenÃ¼");
 		JMenuItem CG = new JMenuItem("Close Game");
 		CG.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -82,7 +83,7 @@ public class GUI_Game extends JFrame{
 		
 		
 		
-		//CloseButton mit 80 Länge und 30 Höhe als Standard
+		//CloseButton mit 80 LÃ¤nge und 30 HÃ¶he als Standard
 		JButton button = new JButton("Close");
 		button.setBounds(595,500,80,30);
 		panel.add(button);
@@ -106,7 +107,8 @@ public class GUI_Game extends JFrame{
 
 			public void actionPerformed(ActionEvent e) {
 				setDefaultCloseOperation(DISPOSE_ON_CLOSE);
-				new Main();
+				Variablen.startt = new Timestamp(System.currentTimeMillis());
+				Main.main(null);
 				
 			}
 		});
@@ -147,7 +149,7 @@ public class GUI_Game extends JFrame{
 	//JLabel label1 = new JLabel(new ImageIcon("datei.png"));
 
 	/* private int score = 0;
-	 * Methode, in der die Straße evtl in 9 Boxen eingeteilt ist, und 3 Boxen passiert sind. --> score+=100;
+	 * Methode, in der die StraÃŸe evtl in 9 Boxen eingeteilt ist, und 3 Boxen passiert sind. --> score+=100;
 	 * Methode die das Auto erzeugt: score = 0;
 	 * public void DrawScore(Graphics g)
 	 * {
