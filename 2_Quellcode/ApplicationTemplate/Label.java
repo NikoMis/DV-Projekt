@@ -30,6 +30,11 @@ public class Label extends JLabel {
 		if(Variablen.Player.intersects(Variablen.Enemy1) || Variablen.Player.intersects(Variablen.Enemy2) || Variablen.Player.intersects(Variablen.Enemy3)) {
 			Variablen.gameover = true;
 			//System.out.println("Game Over Loser");
+			Variablen.endee = new Timestamp(System.currentTimeMillis());
+			long startConvert = Variablen.startt.getTime();
+			long endeConvert = Variablen.endee.getTime();
+			long elapsedTime = endeConvert - startConvert;
+			System.out.println(elapsedTime/1000 +  " sekunden");
 		}
 		
 		repaint();
