@@ -17,7 +17,6 @@ import javax.swing.JMenuBar;
 import javax.swing.JMenuItem;
 import javax.swing.JPanel;
 import java.awt.Component;
-import java.sql.Timestamp;
 
 
 public class GUI_Game extends JFrame{
@@ -51,7 +50,7 @@ public class GUI_Game extends JFrame{
 		
 		add(panel);
 		panel.setLayout(null);
-		panel.setBackground(Color.CYAN);
+		panel.setBackground(Color.gray);
 		
 		
 		
@@ -107,7 +106,6 @@ public class GUI_Game extends JFrame{
 
 			public void actionPerformed(ActionEvent e) {
 				setDefaultCloseOperation(DISPOSE_ON_CLOSE);
-				Variablen.startt = new Timestamp(System.currentTimeMillis());
 				Main.main(null);
 				
 			}
@@ -146,16 +144,4 @@ public class GUI_Game extends JFrame{
 				});
 		}
 }
-	//JLabel label1 = new JLabel(new ImageIcon("datei.png"));
-
-	/* private int score = 0;
-	 * Methode, in der die Straße evtl in 9 Boxen eingeteilt ist, und 3 Boxen passiert sind. --> score+=100;
-	 * Methode die das Auto erzeugt: score = 0;
-	 * public void DrawScore(Graphics g)
-	 * {
-	 * g.drawString("Score: "+ score, 0, "Koordinaten wo es sein soll")
-	 * }
-	 * 
-	 * Methode die das Spiel zeichnet: --> DrawScore();
-	 */
 
