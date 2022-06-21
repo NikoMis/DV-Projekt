@@ -20,7 +20,7 @@ public class Variablen {
 	static int GegnerSpeed = 4;
 	static int hintergrundspeed = 10; //je her die zahl desto langsamer, weil es wiederholung pro ms bedeutet
 	static Box Player = new Box(xAuto,yAuto, 60, 80, null);
-	
+	static int Score = 0;
 	static Box Enemy1 = new Box(xGegner1, yGegner1, 60, 80, null);
 	static Box Enemy2 = new Box(xGegner2, yGegner2, 60, 80, null);
 	static Box Enemy3 = new Box(xGegner3, yGegner3, 60, 80, null);
