@@ -27,6 +27,11 @@ public class Label extends JLabel {
 		g.drawImage(Variablen.iAuto, Variablen.xGegner2, Variablen.yGegner2, 60, 80, null);
 		g.drawImage(Variablen.iAuto, Variablen.xGegner3, Variablen.yGegner3, 60, 80, null);
 		
+		g.setColor(Color.red);
+		g.setFont(new Font("MV Boli", Font.PLAIN, 20));
+		g.drawString("Score: " + Variablen.Score/4, 650, 50); // /4 kann durch belibige Zahl ersetzt werden, war nur damit er nicht zu schnell steigt
+		
+		
 		if(Variablen.Player.intersects(Variablen.Enemy1) || Variablen.Player.intersects(Variablen.Enemy2) || Variablen.Player.intersects(Variablen.Enemy3)) {
 			Variablen.gameover = true;
 			//System.out.println("Game Over Loser");
@@ -43,6 +48,10 @@ public class Label extends JLabel {
 			g.setColor(Color.red);
 			g.setFont(new Font("MV Boli", Font.PLAIN, 45));
 			g.drawString("Game Over Loser", 200, 100);
+			g.setFont(new Font("MV Boli", Font.PLAIN, 30));
+			g.drawString("Your Score: " + Variablen.Score/4, 300, 150);
+			
+			
 		}
 		
 
