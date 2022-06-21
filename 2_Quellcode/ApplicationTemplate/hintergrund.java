@@ -20,6 +20,8 @@ public class hintergrund {
 				
 				if (Variablen.gameover == false) {
 					
+				Variablen.Score +=1;	
+					
 				if(Variablen.hintergrundY1<596) {
 					Variablen.hintergrundY1 += 2;
 				}
