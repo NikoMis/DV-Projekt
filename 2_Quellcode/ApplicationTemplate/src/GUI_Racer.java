@@ -23,10 +23,10 @@ private String m_hfulogo;
 		setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
 		//Bild laden
 		
-		/*add(new BackgroundPanel(new ImageIcon("C:\\Users\\nikol\\OneDrive\\Desktop\\tufftuff.jpg")));
+		add(new BackgroundPanel(new ImageIcon("C:\Users\Ataa\OneDrive - Hochschule Furtwangen\downloads\DV projekt)));
 		pack();
 		setVisible(true);
-		*/
+		
 				
 		JPanel panel = new JPanel();
 		
