@@ -39,7 +39,7 @@ public class hintergrund {
 					Variablen.yGegner1 += Variablen.GegnerSpeed;
 					Variablen.Enemy1.y = Variablen.yGegner1;   //Von Florian
 				}
-	//---------------------------------Von Florian------------------------------------				
+					
 				else {
 					Variablen.yGegner1 = -300;
 					Variablen.Enemy1.y = Variablen.yGegner1;	
@@ -112,7 +112,7 @@ public class hintergrund {
 			if (Variablen.gameover == true) {
 				back.cancel();						
 			
-//---------------------------------------Ende Florian---------------------------------------------------------------			
+		
 			}
 			}
 	
