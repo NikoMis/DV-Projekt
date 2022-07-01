@@ -17,9 +17,9 @@ public class hintergrund {
 			
 		
 				
-				if (Variablen.gameover == false) {
+				if (Variablen.gameover == false) { //Von Florian
 					
-					Variablen.Score +=1;
+					Variablen.Score +=1;	   //Von Florian
 					
 					
 				if(Variablen.hintergrundY1<596) {
@@ -37,28 +37,29 @@ public class hintergrund {
 				}
 				if(Variablen.yGegner1<640) {
 					Variablen.yGegner1 += Variablen.GegnerSpeed;
-					Variablen.Enemy1.y = Variablen.yGegner1;
+					Variablen.Enemy1.y = Variablen.yGegner1;   //Von Florian
 				}
+	//---------------------------------Von Florian------------------------------------				
 				else {
 					Variablen.yGegner1 = -300;
-					Variablen.Enemy1.y = Variablen.yGegner1;
-					Random rnd = new Random();
-					int Spur = rnd.nextInt(4)+1;
-					switch (Spur) {
-					case 1: Variablen.xGegner1 = 50;
-							break;
-					case 2: Variablen.xGegner1 = 250;
-							break;
-					case 3: Variablen.xGegner1 = 465;
-							break;
-					case 4: Variablen.xGegner1 = 660;
-							break;
+					Variablen.Enemy1.y = Variablen.yGegner1;	
+					Random rnd = new Random();			
+					int Spur = rnd.nextInt(4)+1;			
+					switch (Spur) {					
+					case 1: Variablen.xGegner1 = 50;		
+							break;				
+					case 2: Variablen.xGegner1 = 250;		
+							break;				
+					case 3: Variablen.xGegner1 = 465;		
+							break;				
+					case 4: Variablen.xGegner1 = 660;		
+							break;				
 					}
-					Variablen.Enemy1.x = Variablen.xGegner1;
+					Variablen.Enemy1.x = Variablen.xGegner1;	
 				}
-				if(Variablen.yGegner2<640) {
-					Variablen.yGegner2 += Variablen.GegnerSpeed;
-					Variablen.Enemy2.y = Variablen.yGegner2;
+				if(Variablen.yGegner2<640) {				
+					Variablen.yGegner2 += Variablen.GegnerSpeed; 	
+					Variablen.Enemy2.y = Variablen.yGegner2;	
 				}
 				else {
 					Variablen.yGegner2 = -300;
@@ -109,9 +110,9 @@ public class hintergrund {
 						
 		
 			if (Variablen.gameover == true) {
-				back.cancel();
+				back.cancel();						
 			
-			
+//---------------------------------------Ende Florian---------------------------------------------------------------			
 			}
 			}
 	
